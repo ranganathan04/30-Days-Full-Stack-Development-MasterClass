@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><h5 id="h1">rohit</h5></td>
+            <td><p id="p1">0</p></td>
+        </tr>
+        <tr>
+            <td><h5 id="h2">virat</h5></td>
+            <td><p id="p2">0</p></td>
+        </tr>
+        <tr>
+            <td><button id="b1">rohit</button></td>
+            <td><button id="b2">virat</button></td>
+        </tr>
+    </table>
+
+    <script>
+        let r1=0;
+        let r2=0;
+        let ba1="rohit";
+        let ba2="virat";
+
+        document.getElementById('b1').onclick= function(){
+            r1=r1+1;
+            document.getElementById('p1').innerHTML=r1;
+            updateDemo();
+        }
+
+        document.getElementById('b2').onclick= function(){
+            r2=r2+1;
+            document.getElementById('p2').innerHTML=r2;
+            updateDemo();
+        }
+
+        function updateDemo(){
+            if(r2>r1){
+                document.getElementById("h1").innerHTML=ba2;
+                document.getElementById("p1").innerHTML=r2;
+                document.getElementById("h2").innerHTML=ba1;
+                document.getElementById("p2").innerHTML=r1;
+            }
+            else{
+                {
+                document.getElementById("h1").innerHTML=ba1;
+                document.getElementById("p1").innerHTML=r1;
+                document.getElementById("h2").innerHTML=ba2;
+                document.getElementById("p2").innerHTML=r2;
+            }
+            }
+
+        }
+    </script>
+</body>
+</html>
