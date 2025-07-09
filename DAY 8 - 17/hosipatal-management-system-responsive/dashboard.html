@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - HMS</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    Hospital Management Dashboard
+  </header>
+  <nav class="navbar">
+    <a href="#dashboard"><i class="fas fa-home"></i> Dashboard</a>
+    <a href="#doctors"><i class="fas fa-user-md"></i> Doctors</a>
+    <a href="#patients"><i class="fas fa-procedures"></i> Patients</a>
+    <a href="#appointments"><i class="fas fa-calendar-check"></i> Appointments</a>
+    <button class="toggle-btn" onclick="toggleDarkMode()"><i class="fas fa-adjust"></i></button>
+  </nav>
+  <main class="container">
+    <section id="dashboard">
+      <h2>Welcome, Admin</h2>
+      <p>Manage hospital modules using the menu above.</p>
+    </section>
+    <section id="doctors" class="module-section">
+      <h3>Doctor Registration</h3>
+      <form id="doctorForm">
+        <input type="text" id="dname" placeholder="Doctor Name" required />
+        <input type="text" id="dspecial" placeholder="Specialization" required />
+        <input type="text" id="davail" placeholder="Availability" required />
+        <button type="submit">Add Doctor</button>
+      </form>
+      <table>
+        <thead><tr><th>Name</th><th>Specialization</th><th>Availability</th></tr></thead>
+        <tbody id="doctorTableBody">
+      <tr><td>Dr. Alice</td><td>Cardiology</td><td>Mon-Fri</td></tr>
+      <tr><td>Dr. Bob</td><td>Neurology</td><td>Tue-Thu</td></tr>
+    </tbody>
+      </table>
+    </section>
+    <section id="patients" class="module-section">
+      <h3>Patient Registration</h3>
+      <form id="patientForm">
+        <input type="text" id="pname" placeholder="Patient Name" required />
+        <input type="number" id="page" placeholder="Age" required />
+        <select id="pgender" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <button type="submit">Add Patient</button>
+      </form>
+      <table>
+        <thead><tr><th>Name</th><th>Age</th><th>Gender</th></tr></thead>
+        <tbody id="patientTableBody">
+      <tr><td>John Doe</td><td>30</td><td>Male</td></tr>
+      <tr><td>Jane Smith</td><td>25</td><td>Female</td></tr>
+    </tbody>
+      </table>
+    </section>
+    <section id="appointments" class="module-section">
+      <h3>Book Appointment</h3>
+      <form id="appointmentForm">
+        <input type="text" id="apptPatient" placeholder="Patient Name" required />
+        <input type="text" id="apptDoctor" placeholder="Doctor Name" required />
+        <input type="datetime-local" id="apptDateTime" required />
+        <button type="submit">Book Appointment</button>
+      </form>
+      <table>
+        <thead><tr><th>Patient</th><th>Doctor</th><th>Date & Time</th></tr></thead>
+        <tbody id="appointmentTableBody">
+      <tr><td>John Doe</td><td>Dr. Alice</td><td>2025-06-20 10:00</td></tr>
+      <tr><td>Jane Smith</td><td>Dr. Bob</td><td>2025-06-21 14:30</td></tr>
+    </tbody>
+      </table>
+    </section>
+  
+    <section id="billing" class="module-section">
+      <h3>Billing</h3>
+      <p>Billing module coming soon...</p>
+      <table>
+        <thead><tr><th>Patient</th><th>Amount</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>John Doe</td><td>$150</td><td>Paid</td></tr>
+          <tr><td>Jane Smith</td><td>$200</td><td>Pending</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="reports" class="module-section">
+      <h3>Reports</h3>
+      <p>Reports module coming soon...</p>
+      <table>
+        <thead><tr><th>Report</th><th>Date</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Monthly Appointment Report</td><td>June 2025</td><td>Generated</td></tr>
+          <tr><td>Doctor Performance</td><td>June 2025</td><td>Pending</td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <section id="pharmacy" class="module-section">
+      <h3>Pharmacy</h3>
+      <table>
+        <thead><tr><th>Medicine</th><th>Quantity</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr><td>Paracetamol</td><td>50</td><td>$0.50</td></tr>
+          <tr><td>Amoxicillin</td><td>20</td><td>$1.20</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="labtests" class="module-section">
+      <h3>Lab Tests</h3>
+      <table>
+        <thead><tr><th>Test Name</th><th>Patient</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Blood Test</td><td>John Doe</td><td>Completed</td></tr>
+          <tr><td>X-Ray</td><td>Jane Smith</td><td>Pending</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="feedback" class="module-section">
+      <h3>Patient Feedback</h3>
+      <table>
+        <thead><tr><th>Patient</th><th>Feedback</th></tr></thead>
+        <tbody>
+          <tr><td>John Doe</td><td>Excellent service</td></tr>
+          <tr><td>Jane Smith</td><td>Very good staff and facilities</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="admin" class="module-section">
+      <h3>Admin User Management</h3>
+      <table>
+        <thead><tr><th>Username</th><th>Role</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>admin</td><td>Super Admin</td><td>Active</td></tr>
+          <tr><td>staff01</td><td>Staff</td><td>Active</td></tr>
+        </tbody>
+      </table>
+    </section>
+    </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Attendance System</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Attendance Management System</h1>
+
+    <div class="form">
+      <input type="text" id="studentName" placeholder="Enter Student Name">
+      <button id="addStudentBtn">Add Student</button>
+    </div>
+
+    <div class="form">
+      <input type="text" id="searchInput" placeholder="Search Student">
+      <input type="date" id="attendanceDate" value="">
+    </div>
+
+    <div id="studentList">
+      <!-- Dynamic student cards will be rendered here -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

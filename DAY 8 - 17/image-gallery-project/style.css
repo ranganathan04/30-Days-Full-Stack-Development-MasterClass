@@ -1,0 +1,178 @@
+/* Base Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: #ddd;
+}
+
+/* Title */
+.title {
+  margin: 20px;
+  font-size: 2.5rem;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #2196F3;
+  color: white;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0b7dda;
+}
+
+/* Gallery Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Image Card */
+.img-container {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+body.dark .img-container {
+  background: #1e1e1e;
+}
+
+/* Image Styling */
+.img-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.img-container img:hover {
+  transform: scale(1.03);
+}
+
+/* Caption Styling */
+.caption {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #000;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark .caption {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.85);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 70%;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Navigation Buttons in Lightbox */
+.nav-buttons button {
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+/* Theme Toggle - TOP LEFT */
+.theme-toggle-wrapper {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 10000;
+}
+
+/* Toggle Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider Background */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+/* Slider Knob */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Toggle ON */
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}

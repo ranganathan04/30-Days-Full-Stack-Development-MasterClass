@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+</head>
+<body>
+    <form onsubmit="return setValue()">
+        <input type="text" placeholder="Enter Name" id="na">
+        <input type="number" placeholder="Enter Number" id="nu">
+        <input type="email" placeholder="Enter E-Mail" id="em">
+        <input type="submit" value="Login">
+    </form>
+
+    <form onsubmit="return getValue()">
+        <input type="search" id="se">
+        <input type="submit">
+    </form>
+    <span id="data"></span>
+
+    <script>
+        function setValue(){
+            let userName=document.getElementById('na').value;
+            let userNumber=document.getElementById('nu').value;
+            let userEmail=document.getElementById('em').value;
+
+            // localStorage.setItem("key","value");
+            localStorage.setItem("User Name",userName);
+            localStorage.setItem("User Number",userNumber);
+            localStorage.setItem("User Mail",userEmail);
+            console.log("Sucess");
+            // alert("SUBMITTED");
+            return true;
+        }
+        function getValue(){
+            let search=document.getElementById('se').value;
+            let data=localStorage.getItem(search);
+            document.getElementById('data').innerHTML=data;
+            alert("value got");
+            // localStorage.clear();
+            return true;
+        }
+
+    </script>
+</body>
+</html>

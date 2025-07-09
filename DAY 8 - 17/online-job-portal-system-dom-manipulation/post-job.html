@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post a Job | Job Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .post-job-container {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .post-job-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .form-group button {
+      background-color: #1e90ff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="post-job-container">
+  <h2>Post a New Job</h2>
+  <form onsubmit="submitJob(event)">
+    <div class="form-group">
+      <label>Job Title</label>
+      <input type="text" id="jobTitle" required>
+    </div>
+    <div class="form-group">
+      <label>Company Name</label>
+      <input type="text" id="companyName" required>
+    </div>
+    <div class="form-group">
+      <label>Location</label>
+      <input type="text" id="jobLocation" required>
+    </div>
+    <div class="form-group">
+      <label>Job Type</label>
+      <select id="jobType" required>
+        <option>Full Time</option>
+        <option>Part Time</option>
+        <option>Internship</option>
+        <option>Contract</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Job Description</label>
+      <textarea id="jobDescription" rows="4" required></textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit">Post Job</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  function submitJob(e) {
+    e.preventDefault();
+    const title = document.getElementById("jobTitle").value;
+    const company = document.getElementById("companyName").value;
+    const location = document.getElementById("jobLocation").value;
+    const type = document.getElementById("jobType").value;
+    const desc = document.getElementById("jobDescription").value;
+
+    alert("Job Posted Successfully (Simulated)\n\n" +
+      "Title: " + title +
+      "\nCompany: " + company +
+      "\nLocation: " + location +
+      "\nType: " + type +
+      "\nDescription: " + desc);
+    
+    // Clear form
+    document.querySelector('form').reset();
+  }
+</script>
+
+</body>
+</html>

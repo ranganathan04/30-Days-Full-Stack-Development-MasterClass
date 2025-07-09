@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  <title>JobConnect Portal</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Basic styles to make it work */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f6fa;
+    }
+
+    header {
+      background-color: #1e90ff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #1e90ff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    .job-listings {
+      padding: 40px;
+    }
+
+    .job-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      cursor: pointer;
+    }
+
+    .job-card button {
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #1e90ff;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 500px;
+    }
+
+    .close {
+      float: right;
+      font-size: 22px;
+      font-weight: bold;
+      color: red;
+      cursor: pointer;
+    }
+
+    input, textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <!-- <div><strong>JobConnect</strong></div> -->
+    <div>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="post-job.html">Post Job</a>
+      <a href="dashboard.html">Dashboard</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Welcome to JobConnect Portal</h1>
+    <p>Your gateway to great careers!</p>
+  </header>
+
+  <!-- Job Listings -->
+  <main>
+    <section class="job-listings">
+      <h2>Available Jobs</h2>
+      <div class="job-card" onclick="openJob('Frontend Developer', 'Remote', 'HTML, CSS, JS experience required.')">
+        <h3>Frontend Developer</h3>
+        <p>Location: Remote</p>
+        <button>View Details</button>
+      </div>
+      <div class="job-card" onclick="openJob('Backend Developer', 'Bangalore', 'Node.js, MongoDB experience needed.')">
+        <h3>Backend Developer</h3>
+        <p>Location: Bangalore</p>
+        <button>View Details</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Job Modal -->
+  <div id="job-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeJob()">&times;</span>
+      <h2 id="job-title"></h2>
+      <p id="job-location"></p>
+      <p id="job-description"></p>
+      <button onclick="openApply()">Apply Now</button>
+    </div>
+  </div>
+
+  <!-- Apply Modal -->
+  <div id="apply-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeApply()">&times;</span>
+      <h2>Apply for Job</h2>
+      <form onsubmit="submitForm(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Why should we hire you?" required></textarea>
+        <button type="submit">Submit Application</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function openJob(title, location, description) {
+      document.getElementById("job-title").innerText = title;
+      document.getElementById("job-location").innerText = "Location: " + location;
+      document.getElementById("job-description").innerText = description;
+      document.getElementById("job-modal").style.display = "block";
+    }
+
+    function closeJob() {
+      document.getElementById("job-modal").style.display = "none";
+    }
+
+    function openApply() {
+      document.getElementById("job-modal").style.display = "none";
+      document.getElementById("apply-modal").style.display = "block";
+    }
+
+    function closeApply() {
+      document.getElementById("apply-modal").style.display = "none";
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      alert("Application submitted successfully!");
+      document.querySelector("#apply-modal form").reset();
+      closeApply();
+    }
+
+    // Close modals when clicking outside
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        closeJob();
+        closeApply();
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Portal - HMS</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body.user-theme {
+      background: #e6f2ff;
+      color: #004466;
+    }
+    .navbar.user-nav {
+      background-color: #3399ff;
+    }
+    .navbar.user-nav a, .navbar.user-nav .toggle-btn {
+      font-weight: bold;
+    }
+    .user-header {
+      background-color: #3399ff;
+      color: white;
+      padding: 20px;
+      font-size: 1.8rem;
+    }
+    .user-module h3 {
+      color: #005580;
+    }
+    form input, form select, form button {
+      border-radius: 5px;
+      border: 1px solid #007acc;
+    }
+  </style>
+</head>
+<body class="user-theme">
+  <header class="user-header">
+    HMS - User Portal
+  </header>
+  <nav class="navbar user-nav">
+    <a href="#dashboard"><i class="fas fa-user-circle"></i> Home</a>
+    <a href="#doctors"><i class="fas fa-user-md"></i> Doctors</a>
+    <a href="#appointments"><i class="fas fa-calendar-plus"></i> Book Appointment</a>
+    <a href="#labtests"><i class="fas fa-flask"></i> Lab Tests</a>
+    <a href="#feedback"><i class="fas fa-comment-dots"></i> Feedback</a>
+    <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+    <a href="#welcome"><i class="fas fa-handshake"></i> Welcome</a>
+    <a href="#contact"><i class="fas fa-phone-alt"></i> Contact</a>
+
+    <button class="toggle-btn" onclick="toggleDarkMode()"><i class="fas fa-adjust"></i></button>
+  </nav>
+  
+<section class="module-section user-module" id="profile">
+  <h3>User Profile</h3>
+  <p><strong>Username:</strong> <span id="profileName"></span></p>
+  <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+  <button onclick="localStorage.clear(); location.href='login.html';">Logout</button>
+</section>
+
+<section id="welcome" class="module-section user-module">
+  <h3>Welcome to Harmony Care</h3>
+  <p>Thank you for choosing us. Our team is here to provide top-notch healthcare service. Explore our portal to book appointments, view doctors, and give feedback to help us serve you better!</p>
+  <img src="./assets/images.png" alt="Welcome Banner" style="width:15%; height: 10%; margin-top:10px; border-radius:10px;" />
+</section>
+
+
+<main class="container">
+    <section id="dashboard" class="user-module">
+      <h2>Hello, User!</h2>
+      <p>Welcome to your personal hospital dashboard. Use the options above to manage your appointments and view details.</p>
+    </section>
+
+    <section id="doctors" class="module-section user-module">
+      <h3>Available Doctors</h3>
+      <table>
+        <thead><tr><th>Name</th><th>Specialization</th><th>Availability</th></tr></thead>
+        <tbody id="doctorTableBody">
+          <tr><td>Dr. Alice</td><td>Cardiology</td><td>Mon-Fri</td></tr>
+          <tr><td>Dr. Bob</td><td>Neurology</td><td>Tue-Thu</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="appointments" class="module-section user-module">
+      <h3>Book an Appointment</h3>
+      <form id="appointmentForm">
+        <input type="text" id="apptPatient" placeholder="Your Name" required />
+        <input type="text" id="apptDoctor" placeholder="Doctor Name" required />
+        <input type="datetime-local" id="apptDateTime" required />
+        <button type="submit">Book</button>
+      </form>
+      <table>
+        <thead><tr><th>Patient</th><th>Doctor</th><th>Date & Time</th></tr></thead>
+        <tbody id="appointmentTableBody"></tbody>
+      </table>
+    </section>
+
+    <section id="labtests" class="module-section user-module">
+      <h3>Your Lab Test Records</h3>
+      <table>
+        <thead><tr><th>Test Name</th><th>Patient</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Blood Test</td><td>John Doe</td><td>Completed</td></tr>
+          <tr><td>X-Ray</td><td>Jane Smith</td><td>Pending</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="feedback" class="module-section user-module">
+      <h3>Submit Feedback</h3>
+      <form id="feedbackForm">
+        <input type="text" id="feedbackPatient" placeholder="Your Name" required />
+        <input type="text" id="feedbackText" placeholder="Your Feedback" required />
+        <button type="submit">Submit</button>
+      </form>
+      <table>
+        <thead><tr><th>Patient</th><th>Feedback</th></tr></thead>
+        <tbody id="feedbackTableBody">
+          <tr><td>John Doe</td><td>Excellent service</td></tr>
+          <tr><td>Jane Smith</td><td>Very good staff and facilities</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="about" class="module-section user-module">
+  <h3>About Our Hospital</h3>
+  <p>Welcome to Harmony Care Hospital – a place of trust, compassion, and excellence in healthcare. We are committed to delivering quality medical services with advanced technologies and experienced professionals.</p>
+  <img src="./assets/download.png" />
+</section>
+
+
+<section id="contact" class="module-section user-module">
+  <h3>Contact Us</h3>
+  <p><strong>Address:</strong> 123 Health Street, Wellness City, India</p>
+  <p><strong>Phone:</strong> +91 98765 43210</p>
+  <p><strong>Email:</strong> support@harmonycare.com</p>
+  <iframe src="https://maps.google.com/maps?q=hospital&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="200" style="border:0; margin-top:10px;" allowfullscreen></iframe>
+</section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
