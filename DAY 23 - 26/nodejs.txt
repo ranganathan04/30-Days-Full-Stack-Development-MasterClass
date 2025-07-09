@@ -1,0 +1,76 @@
+            NODE JS : 
+
+--POWER FILL AND FLEXIBLE JAVA SCRIPT RUNTIME BULID ON CHROME'S V8 ENGINE.
+
+JS -- NEED TO CONVERT HIGH LEVEL  -- 0,1(BROWSERS).
+
+ ---> IT ALLOWS TO RUN JS CODE OUTSIDE OF A WEB BROWSER 
+
+---> ENABLING YOU TO BUILD SERVER- APPLICATION
+
+---> BROWSER X = NODE.JS = RUN TIME ENVIRONMENT (PROVIDES LIBRARIES AND MODULES).
+
+PRODUCTION = CLIENT SIDE 
+
+SERVER SIDE = DEVELOPER SIDE  = 
+
+            RUN TIME ENVIRONMENT :
+
+IS A PLATFORM OR SYSTEM THAT PROVIDE EVERYTHING TO PROGRAM EXECUTE 
+
+IT REQUIRES NECCESORY COMPONENTS, LIBRARIES, CODES, FRAMEWORK.
+
+
+           STEP 1: CREATE NEW FOLDER IN C DRIVE 
+           STEP 2: OPEN THE FOLDER IN ADD BAR THPE CMD -- IN THAT --> NPM INIT -Y
+           STEP 3: CODE .
+           
+
+WHAT IS SERVER :
+
+SYSTEM = 930 GB
+
+FILES (FOLDER)
+
+HOME 
+ABOUT
+CONTACT 
+ADDRESS
+
+HOME   ABOUT   CONTACT   ADDRESS
+------------------------------------------------------------
+----------------------------------------------------------
+--------------------------------------------------------
+----------------------------------------------------
+
+TO ACCESS --> HTTP://LOCALHOST:3000/FILSE/HOME
+
+
+TWO TYPES :
+
+1) LOCAL SERVER : HTTP://LOCALHOST:3000/ =DEVELOPMENT (EXAMPLE LOCAL GALLAREY)
+
+2) LIVE SERVER : HTTPS://EVENT.WEBINARJAM.COM/LIVE/BROADCAST = PRODUCTION
+(GLOBEL GALLARY)
+
+
+search :
+
+
+part of http
+
+TO OPEN TERMINAL --> CTRL + `
+
+
+http://localhost:5000/
+
+uniform resource locator
+
+
+(req,res) format coversation between 
+client -- server
+
+
+react -- npm start 
+
+node server.js

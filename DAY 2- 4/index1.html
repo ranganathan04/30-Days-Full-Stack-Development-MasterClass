@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>text to speach</h1>
+        <textarea id="textToSpeak" placeholder="enter text...."></textarea>
+        <button onclick="speakText()">Speak</button>
+    </div>
+    <script>
+        var speach = new SpeechSynthesisUtterance();
+
+        function speakText(){
+            var textTospeak = document.getElementById("textToSpeak").value;
+            if(textTospeak.trim() !== ""){
+                speach.text=textTospeak;
+                speach.rate=1;
+                speach.volume=5;
+                speach.pitch=1;
+                window.speechSynthesis.speak(speach);
+            }else{
+                alert("plzz enter some text");
+            }
+
+            }
+    </script>
+</body>
+</html>

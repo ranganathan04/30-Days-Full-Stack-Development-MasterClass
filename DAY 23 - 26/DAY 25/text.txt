@@ -1,0 +1,76 @@
+BUILDING A RESTFUL API WITH NODE.JS :
+
+API :
+
+--> APPLICATION PROGRAMMING INTERFACE (API)
+
+--> HELP TO COMMUNICATE TO DIFFERENT APPLICATION
+
+--> APP1 --- COMMUNICATE (API) --- APP2
+
+-->WEB  BROWSER(CLIENT) ------- COMMUNICATE --------- SERVER
+
+----------------------------------------------------------------------------------------------------
+
+RESTFUL API : 
+
+--> REPRESENTATIONAL STATE TRANSFER API - RESTAPI - 
+WEB  BROWSER(CLIENT) ------- COMMUNICATE --------- SERVER OVER THE WEB
+
+--> IT RELISE SET OF RULES OR PRINCIPAL IS RESFULAPI 
+
+
+--> METHOD / URL = UNIFORM RESOURCE LOCATE ---> (HTTPS://WWW.NETFLIX.COM/)
+
+--> IT USES STANDARD HTTP PROTOCAL IN RESTFULAPI 
+
+--> METHODS
+
+       GET : TO RETRIVE THE DATA
+
+       POST : TO CREATE NEW DATA
+
+       PUT : TO UPDATE THE EXISTING DATA
+
+       DELETE : TO REMOVE THE DATA 
+
+CREATE === POST 
+
+READ === GET 
+
+UPDATE === PUT/PATCH
+
+DELETE === DELETE
+
+when we use the restful api the data in the form of JSON FORMAT :
+
+WHICH IS KEY VALUE FORMAT :
+
+JSON :
+
+  [
+
+{
+KEY : "VALUE";
+ID : "CHAN";
+PASSWOED : "12345678";
+}
+
+{
+KEY : "VALUE";
+ID : "CHAN";
+PASSWOED : "12345678";
+}
+
+{
+KEY : "VALUE";
+ID : "CHAN";
+PASSWOED : "12345678";
+}
+
+  ]
+
+
+http://localhost:5000/endpoint 
+http://localhost:5000/kitkat
+http://localhost:5000/munch

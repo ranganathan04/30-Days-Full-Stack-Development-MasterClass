@@ -1,0 +1,97 @@
+    --> NODE JS :
+
+POWERFUL TOOL FOR BUILDING SERVER SIDE APPLICATION 
+
+DUE TO NON BLOCKING , EVENT -DRIVEN ARCHITECHTURE.
+
+MAKE IT PARTICULARLY EFFICIENT FOR CRUD OPERATION 
+
+MULTIPLE USER MIGHT CREATE , READ , UPDATED , DELETE  DATA IN THE SAME TIME
+
+    -->NON BLOCKING 
+
+1) SYNC - RUN AFTER COMPLETION
+
+2) ASYNC - WE CAN RUN PARALLEL
+
+    --> CRUD - 
+
+CREATE , READ , UPDATED , DELETE
+
+REPRESENTS THE FOUR FUNDEMENTAL OPERATION REQIRE MANAGE DATA
+
+=======================================================================
+
+PS C:\DAY 24\CRUD> node server.js
+created
+PS C:\DAY 24\CRUD> node server.js
+    console.log(datd);
+
+    at readFile (C:\DAY 24\CRUD\server.js:9:17)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:173:12)
+    at node:internal/main/run_main_module:28:49
+
+Node.js v20.18.1
+PS C:\DAY 24\CRUD> node server.js
+<Buffer 48 65 6c 6c 6f 20 53 65 72 76 65 72 2c 20 48 6f 77 20 41 72 65 20 59 6f 75 2c 20 41 72 65 20 59 6f 75 20 52 65 61 64 79 20 54 6f 20 57 72 69 74 65 2e> 
+PS C:\DAY 24\CRUD> node server.js
+Hello Server, How Are You, Are You Ready To Write.
+PS C:\DAY 24\CRUD> node server.js
+Updated
+PS C:\DAY 24\CRUD> node server.js
+    fs.unLinkSync('datd.txt');
+       ^
+
+TypeError: fs.unLinkSync is not a function
+    at deleteFile (C:\DAY 24\CRUD\server.js:18:8)
+    at Object.<anonymous> (C:\DAY 24\CRUD\server.js:22:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:173:12)
+    at node:internal/main/run_main_module:28:49
+
+Node.js v20.18.1
+PS C:\DAY 24\CRUD> node server.js
+    fs.unLinkSync('datd.txt');
+
+TypeError: fs.unLinkSync is not a function
+    at deleteFile (C:\DAY 24\CRUD\server.js:31:8)
+    at Object.<anonymous> (C:\DAY 24\CRUD\server.js:35:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:173:12)
+    at node:internal/main/run_main_module:28:49
+
+Node.js v20.18.1
+PS C:\DAY 24\CRUD> node server.js
+Deleted
+PS C:\DAY 24\CRUD> node server.js
+node:internal/fs/utils:158
+    throw new ERR_INVALID_ARG_VALUE(encoding, 'encoding', reason);
+    ^
+
+    at assertEncoding (node:internal/fs/utils:158:11)
+    at getOptions (node:internal/fs/utils:335:5)
+    at Object.writeFileSync (node:fs:2348:13)
+    at createFile (C:\DAY 24\CRUD\server.js:17:8)
+    at Object.<anonymous> (C:\DAY 24\CRUD\server.js:41:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:173:12) {
+  code: 'ERR_INVALID_ARG_VALUE'
+}
+
+Node.js v20.18.1
+PS C:\DAY 24\CRUD> node server.js
+created
+PS C:\DAY 24\CRUD> 

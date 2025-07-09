@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <input type="text" placeholder="enter name" id="name">
+            <input type="text" placeholder="enter img src" id="source">
+            <input type="text" placeholder="enter bio" id="bio">
+            <button onclick="updateBio()"><b>submit</b></button>
+        </table>
+    </div>
+    <div>
+        <h1 id="h1">Name:</h1>
+        <img src="../assets/image1.jpg" alt="super man image" id="src">
+        <h1 id="h2">Bio</h1>
+    </div>
+
+    <script>
+        function updateBio(){
+            let Name = document.getElementById("name").value;
+            let img = document.getElementById("source").value;
+            let Bio = document.getElementById("bio").value;
+
+            document.getElementById('h1').innerHTML=Name;
+            document.getElementById('src').src=img;
+            document.getElementById('h2').innerHTML=Bio;
+        }
+    </script>
+    
+</body>
+</html>

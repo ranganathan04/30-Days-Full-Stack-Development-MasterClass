@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return submitForm()">
+        <label for="na">Name:</label>
+        <input type="text" id="na" placeholder="Enter Name"><br><br>
+        <span id="sp1" style="color: brown;">  </span><br>
+
+        <label for="nu">Number:</label>
+        <input type="number" id="nu" placeholder="Enter Number"><br><br>
+        <span id="sp2" style="color: brown;">  </span><br>
+
+        <label for="ma">E-Mail:</label>
+        <input type="email" id="ma" placeholder="Enter E-Mail"><br><br>
+        <span id="sp3" style="color: brown;">  </span><br>
+
+        <input type="submit">
+    </form>
+    <script>
+        function submitForm(){
+            let Name=document.getElementById('na').value;
+            let Number=document.getElementById('nu').value;
+            let Mail=document.getElementById('ma').value;
+
+            if(Name==""){
+                document.getElementById('sp1').innerHTML="Kindly Enter Name ";
+                return false;
+            }
+            else{
+                document.getElementById('sp1').innerHTML="";
+            }
+
+            if(Number==""){
+                document.getElementById('sp2').innerHTML="Kindly Enter Number";
+                return false;
+            }
+            else if(isNaN(Number)){
+                document.getElementById('sp2').innerHTML="Kindly Enter Number type";
+                return false;
+            }            
+            else{
+                document.getElementById('sp2').innerHTML="";
+            }
+
+            if(Mail==""){
+                document.getElementById('sp3').innerHTML="Kindly Enter E- Plzz";
+                return false;
+            }
+            else{
+                document.getElementById('sp3').innerHTML="";
+            }
+            alert("Form Submitted");
+            return true;
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+MERN STACK :
+
+MONGO DB  --> JS DATABASE 
+
+EXPRESS JS  ---> BACK END
+
+REACT JS  ----> FRONT END 
+
+NODE JS ---> RUN TIME ENVIRONMENT (USED FOR BUILD AND RUN)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+1)SPA ---> A SINGLE PAGE APPLICATION IS A WEB APPLICATION OR WEBSITE
+       ---->DYNAMICACLY LOAD IS BETTER THEN TRADITIONAL METHOD (MPA)
+
+MPA---> A MULTI BAGE APPLICATION 
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+REACT JS  ----> FRONT END 
+
+--->JAVASCRIPT LIBRARY(SET OF RULES) USED FOR BUILDIN UI
+
+--->PRIMARILY FOR SINGLE PAGE APPLICATION
+
+--->CREATED BY FACEBOOK 
+
+--->USED TO CREATE FAST, INTERACTIVE AND EFFICEANT FRONT END APPLICATION
+
+--->JAVA SCRIPT COMPONENT IS COMPONENTS
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+2)COMPONENTS : ARE REACT ARE BUILDING 
+
+TO SIMPLIFY THE TRADITIONAL METHOD  REACT.JS LIB 
+
+COMPONENTS{
+HTML
+CSS
+JS
+}
+
+REUSABILITY 
+
+ISOLATE 
+
+3)VIRTUAL DOM : IN REACT THE VIRTUAL DOM IS USED TO MAKE UPDAES TO THE USER INTERFACE(UI) MORE EFFICIENT 
+
+                             (DIFFING) : TO MERGE TWO DIFFERENT DOM 
+
+
+4) JSX = JAVA SCRIPT XML ( EXTENSIBLE MARKUP LANGUAGE )
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+INSTALLATION :
+
+OPEN CHROME BROWSER ----> NODE.JS DOWNLOAD ----> PRE BUILT INSTALLER ---> LTS (LONG TERM SUPPORT (V20.18.0(LTS)
+WINDOWS----> 64 BITS.---> LEFT CLICK 
+
+AFTER INSTALLING ---> OPEN CMD PROMPT ---> 
+
+NPM---> NODE PACKAGE MANAGEMENT  
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+REACT :
+
+COMPONENTS :
+
+PROPERITY :
+
+STATE :
+
+
+CREATE NEW FOLDER IN LOCAL DRIVE C : ---->   GO INTO THE FOLDER ---> OPEN CMD IN THE ADDRESS
+---> NPX (NODE PACKAGE EXECUTOR) SPC (CREATE-REACT-APP) SPC FILENAME (FRONTEND) (IN FILE NAME FIRST LETTER SMOLL)
+
+HAPPY HACKING!
+
+NPM START
+
+IN TO THE FOLDER ---> IN ADDRESS BA ---> CMD --->CODE . 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+(COMPONENT) APP.JS == JAVA SCRIPT FILE 
+
+TWO WAY TO CREATE COMPONENTS :
+
+CLASS ---> BEST (RCE ---
+
+FUNCTION ---> LESS FEATURE (RFCE ---  REACT HOOKING ---> TO MANAGE STATE SIMPLY WITH LESS CODE ( SO NOW A DAYS IT IS BEST)
+
+            SIMPLICITY
+
+            HOOKS
+
+COMPONENTS TYPE :
+
+       FUNCTIONAL COMPONENTS :
+                                                                
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+HOW IT IS POSSIBLE TO WRITE A HTML IN JS :
+
+JSX (JS EXTENSION)= JAVA SCRIPT XML ( EXTENSIBLE MARKUP LANGUAGE ) NOT HTML CODE. IS A HTML LIKE CODE.
+
+JS = DOCUMENT.CREATEELEMENT("H1", "HELLO WORLD");
+
+REACT = REACT.CREATEELEMENT("H1", "HELLO WORLD");   ---- BEFORE JSX 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NPM - WITH IN THE FOLDER WE CAN CAN CREATE AND EXECUTE
+
+NPX - GLOBEL
+
+
+
+
+RFCE

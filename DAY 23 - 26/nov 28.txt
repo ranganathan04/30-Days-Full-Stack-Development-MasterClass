@@ -1,0 +1,7 @@
+GET METHOD 
+
+POST METHOD 
+
+MULTER = MIDDILE WARE (npm install multer)
+
+template literals = `` , not ''

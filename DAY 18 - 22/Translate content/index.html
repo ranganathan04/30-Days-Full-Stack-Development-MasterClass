@@ -1,0 +1,57 @@
+<!-- CB - call back function 
+    google translate api script
+    Translate element - class
+    new translate element
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            display: flex;
+            flex-direction: column;
+            padding: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <form class="div">
+            <h1>Login Form</h1>
+            <label for="">Name</label>
+            <input type="text" placeholder="Enter Name">
+            <label for="">Number</label>
+            <input type="Number" placeholder="Enter Number">
+            <label for="">E-Mail</label>
+            <input type="email" placeholder="Enter E-Mail">
+            <button><b>Submit</b></button>
+        </form>
+    </div>
+    <div id="translator" style="background-color: aqua;">
+
+    </div>
+
+    <!-- <script src="">
+        function googleTranslateElementInit(){
+            new google.translate.TranslateElement({pagelanguage:'en'},'translate');
+
+        }
+
+    </script> -->
+
+
+    <script src="https:translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+        function googleTranslateElementInit(){
+        new google.translate.TranslateElement({pagelanguage:'en'},'translator');
+        }
+    </script>
+
+</body>
+</html>

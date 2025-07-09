@@ -1,0 +1,78 @@
+in front end :
+
+1)src -- app.js
+2)npm start 
+3)remove header 
+4)create new file -- form.jsx 
+
+rfce 
+
+inside the div 
+
+<form action="http://localhost:3000/login" method="post">
+<input type="text" name="Name" />
+<input type="number" name="Number" />
+<input type="submit"  />
+
+</form>
+
+in app.js 
+<form/>
+
+in backend :
+
+1) npm init -y
+2) npm install express cors mongose
+
+code .
+
+create server.js in node_module folder 
+
+
+
+
+const expree = require('express')
+const app = express();
+const cors = require('cors')
+const mongose = require('mongose')
+app.use(cors());
+app.use(express.urlencoded({extended:true}));
+
+const mongodb_URL = 'mongoDB connection string';
+mongoose.connect(mongodb_URL)
+.then(()=>{
+console.log("connected")
+})
+.catch(()=>{
+console.log("failed")
+});
+
+const dbSchema = new mongoose.Schema({Username:String,Usernumber:Number});
+const Data = mongoose.model('Student',dbSchema)
+app.post('/login',(req,res)=>{
+const Uname = req.body.Name;
+const Unumber = req.body.Number;
+const newData = new Data({Username:Uname,Usernumber:Unumber})
+newData.save()
+.then(()=>{
+res.send("Form Submitted")
+})
+.catch(()=>{
+res.send("Check Again")
+})
+})
+
+
+app.listen(3000,()=>{
+console.log("server running");
+})
+
+
+
+
+
+
+
+
+
+connect -- driver -- connection string 
